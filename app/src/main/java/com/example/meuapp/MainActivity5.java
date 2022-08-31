@@ -3,8 +3,11 @@ package com.example.meuapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -42,5 +45,13 @@ public class MainActivity5 extends AppCompatActivity {
         SimpleAdapter adapter = new SimpleAdapter(this, lista,
                 R.layout.line_item,de,para);
         listView.setAdapter(adapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view,
+                                    int i, long l) {
+                Toast.makeText(getApplicationContext(),i + "",
+                        Toast.LENGTH_LONG).show();
+            }
+        });
     }
 }
