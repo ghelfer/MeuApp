@@ -38,7 +38,7 @@ public class MainActivity2 extends ListActivity
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
         String item = adapterView.getItemAtPosition(i).toString();
-        String item2 = listagem.get(i);
-        Toast.makeText(this,item,Toast.LENGTH_LONG).show();
+        //String item2 = listagem.get(i);
+        Toast.makeText(this, item, Toast.LENGTH_LONG).show();
     }
 }
