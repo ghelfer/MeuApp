@@ -42,15 +42,24 @@ public class MainActivity5 extends AppCompatActivity {
             lista.add(item);
         }
 
-        SimpleAdapter adapter = new SimpleAdapter(this, lista,
+        //SimpleAdapter adapter = new SimpleAdapter(this, lista, R.layout.line_item,de,para);
+
+        SimpleAdapter adapter = new MeuAdapter(this, lista,
                 R.layout.line_item,de,para);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view,
                                     int i, long l) {
-                Toast.makeText(getApplicationContext(),i + "",
-                        Toast.LENGTH_LONG).show();
+
+                HashMap<String, Object> item = lista.get(i);
+                String valor = item.get("vlr").toString();
+                String dest = item.get("city").toString();
+                String data = item.get("dt").toString();
+
+                Toast.makeText(getApplicationContext(),dest + "\n" + data+ "\n" + valor,
+                        Toast.LENGTH_SHORT).show();
+
             }
         });
     }
