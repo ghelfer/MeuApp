@@ -71,8 +71,9 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent2);
                 return true;
             case R.id.item3:
-                Toast.makeText(getApplicationContext(),"menu item3",
-                        Toast.LENGTH_SHORT).show();
+                Intent intent3 = new Intent(MainActivity.this,
+                        MainActivity3.class);
+                startActivity(intent3);
                 return true;
         }
 
