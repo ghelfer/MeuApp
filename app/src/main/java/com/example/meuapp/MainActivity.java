@@ -1,8 +1,5 @@
 package com.example.meuapp;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -13,6 +10,9 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -78,5 +78,11 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return false;
+    }
+
+    public void actionAula(View view) {
+        Intent intent4 = new Intent(MainActivity.this,
+                MainActivity4.class);
+        startActivity(intent4);
     }
 }
