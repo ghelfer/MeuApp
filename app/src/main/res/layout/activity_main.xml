@@ -21,4 +21,11 @@
         android:onClick="actionAula"
         android:layout_height="wrap_content"/>
 
+
+    <Button
+        android:layout_width="match_parent"
+        android:text="AULA GPS"
+        android:onClick="actionAula6"
+        android:layout_height="wrap_content"/>
+
 </LinearLayout>

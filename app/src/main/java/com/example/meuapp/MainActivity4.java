@@ -59,15 +59,24 @@ public class MainActivity4 extends AppCompatActivity {
         Cursor cursor = db.rawQuery(query, null);
         cursor.moveToFirst();
         lista = new ArrayList<Map<String, Object>>();
+
+        Map<String, Object> item = new HashMap<String, Object>();
+
+        item.put("id", "id");
+        item.put("modelo",  "modelo");
+        item.put("ano",   "ano");
+        item.put("valor", "Valor");
+        lista.add(item);
+
         for (int i = 0; i < cursor.getCount(); i++) {
-            Map<String, Object> item = new HashMap<String, Object>();
+            item = new HashMap<String, Object>();
             String id = cursor.getString(0);
             String modelo = cursor.getString(1);
             int ano = cursor.getInt(2);
             double valor = cursor.getDouble(3);
-            item.put("id", id);
-            item.put("modelo", "Modelo: " + modelo);
-            item.put("ano", "Ano: " + ano);
+            item.put("id",   id);
+            item.put("modelo",  modelo);
+            item.put("ano",  + ano);
             item.put("valor", String.format("R$ %.2f", valor));
             lista.add(item);
             cursor.moveToNext();
