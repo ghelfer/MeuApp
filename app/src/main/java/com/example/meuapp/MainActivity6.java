@@ -39,8 +39,8 @@ public class MainActivity6 extends AppCompatActivity {
         map.setTileSource(TileSourceFactory.MAPNIK);
         map.setMultiTouchControls(true);
         IMapController controller = map.getController();
-        GeoPoint starpoint =  new GeoPoint(0.0,0.0);
-        controller.setZoom(11.0);
+        GeoPoint starpoint =  new GeoPoint(0.0,-50.0);
+        controller.setZoom(3.0);
         controller.setCenter(starpoint);
         map.setHasTransientState(true);
         //map.invalidate();
