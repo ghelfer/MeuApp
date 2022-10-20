@@ -15,5 +15,8 @@
         android:title="Item 3"
         android:icon="@drawable/ic_masks"
         app:showAsAction="ifRoom|withText"/>
+    <item android:id="@+id/item4"
+        android:title="JNI"
+        app:showAsAction="withText"/>
 
 </menu>

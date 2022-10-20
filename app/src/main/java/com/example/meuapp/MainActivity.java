@@ -75,6 +75,9 @@ public class MainActivity extends AppCompatActivity {
                         MainActivity3.class);
                 startActivity(intent3);
                 return true;
+            case R.id.item4:
+                Toast.makeText(this, meuMetodoJni(),Toast.LENGTH_LONG).show();
+                return true;
         }
 
         return false;
@@ -91,4 +94,11 @@ public class MainActivity extends AppCompatActivity {
                 MainActivity6.class);
         startActivity(intent6);
     }
+
+    static {
+        System.loadLibrary("meuapp");
+    }
+
+    public native String meuMetodoJni();
+    public native int meuMetodoJni2(int [] a);
 }
